@@ -25,8 +25,10 @@ Commands:
   help [command]               display help for command
 
   Examples:
+  get-weather-in-cli name Lagos
   get-weather-in-cli name 'Lagos'
-  get-weather-in-cli name 'Jos' -f
+  get-weather-in-cli name-full Jos
+  get-weather-in-cli name-full 'Jos'
   get-weather-in-cli random-location
-  get-weather-in-cli random-location -f
+  get-weather-in-cli random-location-full
 ```

@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+
 const program = require('commander');
 const chalk = require('chalk');
 const {
@@ -25,7 +28,7 @@ program
 
 
 program
-    .command('name <locationName> -f')
+    .command('name-full <locationName>')
     .alias('lf')
     .description(chalk.yellow('Get JSON weather data for a particular location'))
     .action((locationName) => {
@@ -38,15 +41,15 @@ program
     .alias('rl')
     .description(chalk.yellow('Get simple weather data for a random location'))
     .action(() => {
-        getRandomLocatiionWeather();
+        getRandomLocationWeather();
     })
 
 program
-    .command('random-location -f')
+    .command('random-location-full')
     .alias('rl')
     .description(chalk.yellow('Get JSON weather data for a random location'))
     .action(() => {
-        getRandomLocatiionWeatherFull();
+        getRandomLocationWeatherFull();
     })
 
 program.parse(process.argv);

@@ -11,7 +11,7 @@ const random = require('random-names-places');
 dotenv.config({path: '../config.env'});
 
 
-const apiKey = process.env.API_KEY;
+const apiKey = "f1dd65cd893c4c893f235081e61a5b82";
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';
 let NetworkHandler = networkHandler.NetworkHandler;
 
@@ -20,9 +20,9 @@ let NetworkHandler = networkHandler.NetworkHandler;
 getLocationWeather = async (param) => {
 	try{
 		let networkhandler = new NetworkHandler();
-		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${process.env.API_KEY}`);
+		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${apiKey}`);
 		let data = weatherData.weather
-		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${data[0].icon} ${getWeatherIcon(data[0].id)}`);
+		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${getWeatherIcon(data[0].id)}`);
 	}catch(err){
 		console.log(err)
 		console.log('An error occurred! ⚠️');
@@ -38,7 +38,7 @@ getLocationWeather = async (param) => {
 getLocationWeatherFull = async (param) => {
 	try{
 		let networkhandler = new NetworkHandler();
-		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${process.env.API_KEY}`);
+		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${apiKey}`);
 		if(weatherData != undefined){
 			console.log(chalk.green(`Weather data for ${param}`));
         	console.log(weatherData);	
@@ -59,9 +59,9 @@ getRandomLocationWeather = async () => {
 	try{
 		let param = random.place();
 		let networkhandler = new NetworkHandler();
-		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${process.env.API_KEY}`);
+		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${apiKey}`);
 		let data = weatherData.weather
-		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${data[0].icon} ${getWeatherIcon(data[0].id)}`);
+		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${getWeatherIcon(data[0].id)}`);
 	}catch(err){
 		console.log('An error occurred! ⚠️ ');
 	}
@@ -71,7 +71,7 @@ getRandomLocationWeatherFull = async () => {
 	try{
 		let param = random.place();
 		let networkhandler = new NetworkHandler();
-		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${process.env.API_KEY}`);
+		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${apiKey}`);
 		if(weatherData != undefined){
 			console.log(chalk.green(`Weather data for ${param}`));
         	console.log(weatherData);	
