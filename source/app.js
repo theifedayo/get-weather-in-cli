@@ -5,7 +5,7 @@ const {
     getLocationWeatherFull,
     getRandomLocatiionWeather,
     getRandomLocatiionWeatherFull
-} = require('./services/weather');
+} = require('./services/weather.js');
 
 
 
@@ -46,7 +46,7 @@ program
     .alias('rl')
     .description(chalk.yellow('Get JSON weather data for a random location'))
     .action(() => {
-        getRandomLocatiionWeather();
+        getRandomLocatiionWeatherFull();
     })
 
 program.parse(process.argv);

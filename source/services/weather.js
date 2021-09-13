@@ -25,7 +25,7 @@ getLocationWeather = async (param) => {
 		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${data[0].icon} ${getWeatherIcon(data[0].id)}`);
 	}catch(err){
 		console.log(err)
-		console.log('An error occurred! ⚠️ ');
+		console.log('An error occurred! ⚠️');
 	}
 }
 
