@@ -23,7 +23,7 @@ chai.use(chaiHttp);
 
 describe("GET WEATHER DATA", () => {
     it("It should GET weather data from source", async () => {
-        console.log(apiKey)
+        console.log(apiKey);
         let response = await axios.get(`${openWeatherMapURL}?q=Lagos&units=metric&appid=f1dd65cd893c4c893f235081e61a5b82`);
         response.should.have.status(200);
         response.should.have.property('data');

@@ -16,7 +16,7 @@ class NetworkHandler{
 				return data;
 			}
 		}catch(err){
-			console.log('An error occured! Check your network connection');
+			console.log('An error occured! Check your network connection 📶');
 		}	
 	}
 }

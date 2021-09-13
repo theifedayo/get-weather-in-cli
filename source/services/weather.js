@@ -15,35 +15,68 @@ let NetworkHandler = networkHandler.NetworkHandler;
 
 
 
-getLocationWeather = async (params) => {
+getLocationWeather = async (param) => {
 	try{
 		let networkhandler = new NetworkHandler();
-		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${params}&units=metric&appid=${process.env.API_KEY}`);
+		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${process.env.API_KEY}`);
 		console.log(weatherData);
 	}catch(err){
-		console.log('An error occurred!');
+		console.log('An error occurred! ⚠️ ');
 	}
 }
 
-getLocationWeatherFull = async (params) => {
+
+
+
+
+
+
+getLocationWeatherFull = async (param) => {
 	try{
 		let networkhandler = new NetworkHandler();
-		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${params}&units=metric&appid=${process.env.API_KEY}`);
-		console.log(weatherData);
+		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${process.env.API_KEY}`);
+		if(weatherData != undefined){
+			console.log(`Weather data for ${param}`);
+        	console.log(weatherData);	
+		}else{
+			console.log('weather data is undefined 😔');
+		}
+		
+		
 	}catch(err){
-		console.log('An error occurred!');
+		console.log('An error occurred! ⚠️');
 	}
 }
 
-getRandomLocatiionWeather = async (params) => {
+
+
+
+
+
+getRandomLocatiionWeather = async (param) => {
 	try{
 
 	}catch(err){
-		console.log('An error occurred!');
+		console.log('An error occurred! ⚠️');
+	}
+}
+
+getRandomLocatiionWeatherFull = async (param) => {
+	try{
+
+	}catch(err){
+		console.log('An error occurred! ⚠️');
 	}
 }
 
 
-getLocationWeatherFull('Ile-Ife');
+getLocationWeatherFull('Jos');
+
+module.exports = {
+    getLocationWeather,
+    getLocationWeatherFull,
+    getRandomLocatiionWeather,
+    getRandomLocatiionWeatherFull
+};
 
 
