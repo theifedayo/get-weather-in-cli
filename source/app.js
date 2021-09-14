@@ -1,13 +1,11 @@
 #!/usr/bin/env node
-
-
 const program = require('commander');
 const chalk = require('chalk');
 const {
     getLocationWeather,
     getLocationWeatherFull,
-    getRandomLocatiionWeather,
-    getRandomLocatiionWeatherFull
+    getRandomLocationWeather,
+    getRandomLocationWeatherFull
 } = require('./services/weather.js');
 
 

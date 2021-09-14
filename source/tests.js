@@ -13,7 +13,7 @@ const random = require('random-names-places');
 dotenv.config({path: './config.env'});
 
 
-const apiKey = process.env.API_KEY;
+const apiKey = "f1dd65cd893c4c893f235081e61a5b82";
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';
 
 
@@ -24,7 +24,7 @@ chai.use(chaiHttp);
 
 describe("GET WEATHER DATA", () => {
     it("It should GET weather data from source", async () => {
-        let response = await axios.get(`${openWeatherMapURL}?q=Lagos&units=metric&appid=f1dd65cd893c4c893f235081e61a5b82`);
+        let response = await axios.get(`${openWeatherMapURL}?q=Lagos&units=metric&appid=${apiKey}`);
         response.should.have.status(200);
         response.should.have.property('data');
         response.data.should.be.a('object');
