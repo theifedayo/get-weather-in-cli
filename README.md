@@ -1,5 +1,12 @@
 # get-weather-in-cli
 
+[![GitHub Repo size in Bytes](https://img.shields.io/github/repo-size/theifedayo/get-weather-in-cli)](https://github.com/theifedayo/get-weather-in-cli)
+[![Npm package version](https://img.shields.io/npm/v/get-weather-in-cli)](https://github.com/theifedayo/get-weather-in-cli)
+[![Issues](https://img.shields.io/github/issues/theifedayo/get-weather-in-cli)](https://github.com/theifedayo/get-weather-in-cli)
+[![Pull Requests](https://img.shields.io/github/issues-pr/theifedayo/get-weather-in-cli)](https://github.com/theifedayo/get-weather-in-cli)
+[![License](https://img.shields.io/npm/l/get-weather-in-cli)](https://github.com/theifedayo/get-weather-in-cli)
+
+
 ## Description
 get-weather-in-cli allows users to get any location's weather data on terminal.
 
