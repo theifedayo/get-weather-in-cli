@@ -21,18 +21,12 @@ getLocationWeather = async (param) => {
 	try{
 		let networkhandler = new NetworkHandler();
 		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${apiKey}`);
-		let data = weatherData.weather
+		let data = weatherData.weather;
 		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${getWeatherIcon(data[0].id)}`);
 	}catch(err){
-		console.log(err)
 		console.log('An error occurred! ⚠️');
 	}
 }
-
-
-
-
-
 
 
 getLocationWeatherFull = async (param) => {
@@ -51,21 +45,18 @@ getLocationWeatherFull = async (param) => {
 }
 
 
-
-
-
-
 getRandomLocationWeather = async () => {
 	try{
 		let param = random.place();
 		let networkhandler = new NetworkHandler();
 		var weatherData = await networkhandler.getData(`${openWeatherMapURL}?q=${param}&units=metric&appid=${apiKey}`);
-		let data = weatherData.weather
+		let data = weatherData.weather;
 		console.log(`${data[0].description} at ${param}. It is currently ${weatherData.main.temp}° ${getWeatherIcon(data[0].id)}`);
 	}catch(err){
 		console.log('An error occurred! ⚠️ ');
 	}
 }
+
 
 getRandomLocationWeatherFull = async () => {
 	try{
@@ -83,11 +74,8 @@ getRandomLocationWeatherFull = async () => {
 	}
 }
 
-// getLocationWeather('Ile-Ife')
-// getLocationWeatherFull('Ile-Ife')
-// getRandomLocationWeather();
-// getRandomLocationWeatherFull();
-
+getRandomLocationWeather();
+getRandomLocationWeatherFull();
 module.exports = {
     getLocationWeather,
     getLocationWeatherFull,
