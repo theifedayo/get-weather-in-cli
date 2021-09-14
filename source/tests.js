@@ -13,7 +13,7 @@ const random = require('random-names-places');
 dotenv.config({path: './config.env'});
 
 
-const apiKey = "f1dd65cd893c4c893f235081e61a5b82";
+const apiKey = "f1dd65cd893c4c893f235081e61a5b82"; //process.env.API_KEY
 const openWeatherMapURL = 'https://api.openweathermap.org/data/2.5/weather';
 
 
