@@ -15,7 +15,7 @@ get-weather-in-cli allows users to get any location's weather data on terminal.
 via [npm](https://www.npmjs.com/package/get-weather-in-cli) :package:
 
 ```
-npm install get-weather-in-cli
+npm install -g get-weather-in-cli
 ```
 
 ## Usage
