@@ -1,6 +1,6 @@
 {
   "name": "get-weather-in-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get any location's weather data on terminal",
   "homepage": "https://github.com/theifedayo/get-weather-in-cli",
   "main": "app.js",
