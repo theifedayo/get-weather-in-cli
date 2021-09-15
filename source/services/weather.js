@@ -74,8 +74,6 @@ getRandomLocationWeatherFull = async () => {
 	}
 }
 
-getRandomLocationWeather();
-getRandomLocationWeatherFull();
 module.exports = {
     getLocationWeather,
     getLocationWeatherFull,
