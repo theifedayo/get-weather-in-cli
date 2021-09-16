@@ -6,7 +6,7 @@
   "main": "app.js",
   "bin": "./source/app.js",
   "scripts": {
-    "test": "mocha --exit source/tests.js"
+    "test": "export NODE_ENV=test && mocha --exit source/tests.js"
   },
   "keywords": [
     "npm",
